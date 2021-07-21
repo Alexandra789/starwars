@@ -1,0 +1,36 @@
+{
+  "name": "starwars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development --open",
+    "watch": "webpack --mode development --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexandra789/starwars.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexandra789/starwars/issues"
+  },
+  "homepage": "https://github.com/Alexandra789/starwars#readme",
+  "dependencies": {
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.2.0",
+    "css-minimizer-webpack-plugin": "^3.0.2",
+    "mini-css-extract-plugin": "^2.1.0",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
+    "terser-webpack-plugin": "^5.1.4",
+    "webpack": "^5.45.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.7.2"
+  }
+}
