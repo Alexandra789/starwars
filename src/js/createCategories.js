@@ -1,4 +1,4 @@
-let categoriesName = ['character', 'starships', 'planets'];
+let categoriesName = ['characters', 'starships', 'planets'];
 let categoriesImg =
     ["../../assets/images/character.jpg",
     "../../assets/images/starships.jpg",
