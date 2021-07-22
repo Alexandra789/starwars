@@ -1,3 +1,4 @@
 import './scss/style.scss';
 
-import './js/categories';
+import './js/createCategories';
+import './js/categories/characters';
