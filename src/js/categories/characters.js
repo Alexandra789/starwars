@@ -1,8 +1,6 @@
 import {getAllPeople, getPerson, getPersonImage} from '../api.js';
 
 let blockCharacters = document.querySelector('.block__characters');
-let blockPerson = document.querySelector('.block__person');
-let charactersWrapper = document.querySelector('.characters-wrapper');
 let allPeopleWrapper = document.querySelector('.all-people-wrapper');
 let personInformationWrapper = document.querySelector('.person-information-wrapper');
 let categoriesWrapper = document.querySelector('.categories-wrapper');
@@ -65,7 +63,6 @@ blockCharacters.addEventListener('click',(e)=>{
 allPeopleWrapper.addEventListener('click',(e)=>{
     if(!e.target.classList.contains('all-people-wrapper') && !e.target.classList.contains('name-wrapper')){
         let id = e.target.getAttribute('id-person');
-        // console.log(e.target);
         getPerson(id).then((res)=>{
             showInfoAboutPerson(res);
         });
