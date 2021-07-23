@@ -25,11 +25,11 @@ export const getPersonImage = (id) => {
     return `${_imageBase}/characters/${id}.jpg`
 };
 
-export const getStarshipImage = ({id}) => {
+export const getStarshipImage = (id) => {
     return `${_imageBase}/starships/${id}.jpg`
 };
 
-export const getPlanetImage = ({id}) => {
+export const getPlanetImage = (id) => {
     return `${_imageBase}/planets/${id}.jpg`
 };
 
