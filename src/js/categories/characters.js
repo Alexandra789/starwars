@@ -20,7 +20,7 @@ function checkImgSrc(url){
 
 function createInfoAboutPerson(res){
     let img =  document.querySelector('.img');
-    let name = document.querySelector('.name');
+    let name = document.querySelector('.name-block');
     let gender = document.querySelector('.gender');
     let birthday = document.querySelector('.birthday');
     let eyeColor = document.querySelector('.eye-color');
@@ -37,7 +37,7 @@ function createInfoAboutPerson(res){
 
 function createInfoAboutStarship(res){
 
-    let name = document.querySelector('.name');
+    let name = document.querySelector('.name-block');
     let model = document.querySelector('.model');
     let lengthStarship = document.querySelector('.length');
     let passengers = document.querySelector('.passengers');
@@ -51,7 +51,7 @@ function createInfoAboutStarship(res){
     imgSrc ? img.setAttribute('src',`${getStarshipImage(res.id)}`) :
         img.setAttribute('src','../../assets/images/not-picture.jpg');
 
-    name.innerText = `Name : ${res.name}`;
+    name.innerText = `${res.name}`;
     model.innerText = `Model : ${res.model}`;
     lengthStarship.innerText = `Length : ${res.length}m`;
     passengers.innerText = `Passengers : ${res.passengers}`;
@@ -62,7 +62,7 @@ function createInfoAboutStarship(res){
 }
 
 function createInfoAboutPlanet(res){
-    let name = document.querySelector('.name');
+    let name = document.querySelector('.name-block');
     let population = document.querySelector('.population');
     let rotationPeriod = document.querySelector('.rotation-period');
     let diameter = document.querySelector('.diameter');
@@ -73,7 +73,7 @@ function createInfoAboutPlanet(res){
     imgSrc ? img.setAttribute('src',`${getPlanetImage(res.id)}`) :
         img.setAttribute('src','../../assets/images/not-picture.jpg')
 
-    name.innerText = `Name : ${res.name}`;
+    name.innerText = `${res.name}`;
     population.innerText = `Population : ${res.population}`;
     rotationPeriod.innerText = `Rotation Period : ${res.rotationPeriod} days`;
     diameter.innerText = `Diameter : ${res.diameter}km`
