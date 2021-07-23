@@ -15,6 +15,13 @@ body {
   margin: 0 15px;
 }
 
+.arrow{
+  filter: invert(1);
+  margin-top: 50px;
+  width: 75px;
+  height: 65px;
+}
+
 .block{
   transition: transform 0.1s ease-in-out;
   &:hover{
@@ -27,7 +34,7 @@ body {
     margin-top: 15px;
     text-align: center;
     &__title{
-      font-size: 4em;
+      font-size: 5em;
       color: black;
       -webkit-text-stroke: 1px #FFEE58;
       font-weight: bold;
@@ -37,13 +44,12 @@ body {
       color: white;
       margin: -10px 0;
       font-size: 1em;
-      //margin-top: -1em;
-      //margin-bottom: 1em;
     }
   }
 }
 
 .main-content {
+
   .categories-wrapper {
     display: flex;
     justify-content: space-between;
@@ -76,13 +82,13 @@ body {
       }
 
       &:first-child {
-        a {
+        h2 {
           color: #E53935;
         }
       }
 
       &:last-child {
-        a {
+        h2 {
           color: #FFEE58;
         }
       }
@@ -93,7 +99,6 @@ body {
         color: white;
         top: 60%;
         display: block;
-        text-decoration: none;
         background-color: #00000094;
         text-transform: uppercase;
       }
@@ -101,7 +106,7 @@ body {
   }
 
   .characters-wrapper {
-    .all-people-wrapper {
+    .all-wrapper {
       display: flex;
       flex-wrap: wrap;
       margin: 50px 100px;
@@ -111,7 +116,7 @@ body {
         max-width: 200px;
         max-height: 330px;
         margin-right: 35px;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
         cursor: pointer;
 
         &:nth-child(5) {
@@ -123,8 +128,10 @@ body {
         }
 
         .image {
+          margin-bottom: -5px;
+          height: 100%;
           width: 100%;
-          margin-bottom: -4px;
+          object-fit: cover;
         }
 
         .name-wrapper {
@@ -139,35 +146,39 @@ body {
       }
     }
 
-    .person-information-wrapper {
+    .personal-information-wrapper {
       display: none;
-      padding-bottom: 100px;
-      margin: 100px 100px 0;
+      padding-bottom: 50px;
+      margin: 50px 100px;
+
       .info-wrapper {
         display: flex;
         width: 100%;
-        //
-        .other-people {
-          //height: 100%;
+        .other {
           margin-right: 50px;
           background: white;
           width: 800px;
           overflow: scroll;
           height: 555px;
-          .title{
+
+          .title {
             text-align: center;
             padding: 0 20px;
             background: black;
             color: white;
             text-transform: uppercase;
           }
-          .all-people-wrapper{
-            display:flex !important;
+
+          .all-wrapper {
+            display: flex !important;
             justify-content: space-around;
             margin: 10px;
-            .block{
+
+            .block {
               margin-right: 0;
-              .name-wrapper{
+
+              .name-wrapper {
+                height: 15px;
                 background-color: black;
                 color: white;
               }
@@ -177,9 +188,12 @@ body {
 
         .wrap {
           display: flex;
+
           .left-column {
-            .img__person {
+            .img {
               height: 100%;
+              width: 450px;
+              object-fit: cover;
             }
           }
 
@@ -187,17 +201,43 @@ body {
             width: 320px;
             background: white;
             color: black;
-            font-size: 18px;
             padding-left: 20px;
-            p{
-              font-size: 24px;
+
+            p {
+              font-size: 20px;
             }
+
             .name {
               font-size: 32px;
-              text-transform:uppercase;
+              text-transform: uppercase;
             }
           }
         }
+      }
+    }
+  }
+
+  .loader-wrapper {
+    display: none;
+    height: 480px;
+    align-items: center;
+    .loader {
+      display: block;
+      margin: 0 auto;
+      border: 16px solid #f3f3f3;
+      border-top: 16px solid #FFEE58;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
       }
     }
   }
