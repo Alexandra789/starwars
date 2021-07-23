@@ -154,12 +154,13 @@ body {
       .info-wrapper {
         display: flex;
         width: 100%;
+        height: 500px;
         .other {
           margin-right: 50px;
           background: white;
           width: 800px;
           overflow: scroll;
-          height: 555px;
+          height: 500px;
 
           .title {
             text-align: center;
