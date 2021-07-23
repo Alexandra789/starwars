@@ -13,7 +13,7 @@ function createCategory(categoriesName, categoriesImg) {
         block.classList.add(`block__${categoriesName[i]}`);
         block.style.backgroundImage = `url(${categoriesImg[i]})`;
 
-        let title = document.createElement('a');
+        let title = document.createElement('h2');
         title.classList.add('title');
         title.classList.add('block__title');
         title.setAttribute('href','#');
